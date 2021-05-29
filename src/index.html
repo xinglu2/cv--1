@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+        minimum-scale=1,maximum-scale=1,user-scalable=no,
+        viewport-fit=cover">
+    <title>我の八卦图</title>
+    <style id="style"></style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::before {
+            box-sizing: border-box;
+        }
+
+        *::after {
+            box-sizing: border-box;
+        }
+
+        #demo {
+            word-break: break-all;
+        }
+
+        #div1 {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+            /* border: 1px solid blue; */
+
+        }
+
+        #div1::before {
+            content: '';
+            position: absolute;
+        }
+
+        #div1::after {
+            content: '';
+            position: absolute;
+        }
+
+        /* 媒体查询让代码在手机上也能看 */
+        @media(max-width: 500px) {
+            #demo {
+                height: 50vh;
+                overflow: auto;
+            }
+
+            #divWrapper {
+                height: 50vh;
+            }
+
+            #div1 {
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="demo"></div>
+    <div id="divWrapper">
+        <div id="div1"></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
